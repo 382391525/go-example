@@ -1,8 +1,7 @@
 package main
 
-import "goDemo/typeSwitch"
+import "goDemo/basics"
 
 func main() {
-	//newAndMake.NewAndMake()
-	typeSwitch.TypeSwitch()
+	basics.Exchange()
 }
