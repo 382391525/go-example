@@ -1,6 +1,7 @@
 package main
 
-func main() {
-	//basics.Exchange()
+import "goDemo/goroutine"
 
+func main() {
+	goroutine.GoExit()
 }
