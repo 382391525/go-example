@@ -1,7 +1,7 @@
 package main
 
-import "goDemo/goroutine"
+import "goDemo/channel"
 
 func main() {
-	goroutine.GoExit()
+	channel.Rang()
 }
