@@ -1,7 +1,7 @@
 package main
 
-import "goDemo/channel"
+import "goDemo/arr"
 
 func main() {
-	channel.Rang()
+	arr.Test()
 }
