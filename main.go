@@ -1,7 +1,7 @@
 package main
 
-import "goDemo/arr"
+import "goDemo/time"
 
 func main() {
-	arr.Test()
+	time.LongLi()
 }

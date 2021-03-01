@@ -1,6 +1,9 @@
 package channel
 
-import "fmt"
+import (
+	"fmt"
+	"time"
+)
 
 func Rang() {
 	c := make(chan int)
@@ -13,4 +16,13 @@ func Rang() {
 	for v := range c {
 		fmt.Println(v)
 	}
+}
+
+func Test() {
+	ch1 := make(chan int)
+	go func() {
+		fmt.Println(<-ch1)
+	}()
+	ch1 <- 5
+	time.Sleep(1 * time.Second)
 }
