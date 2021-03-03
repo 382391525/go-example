@@ -1,7 +1,7 @@
 package main
 
-import "goDemo/time"
+import "goDemo/lmap"
 
 func main() {
-	time.LongLi()
+	lmap.Test()
 }
