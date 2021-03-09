@@ -1,7 +1,7 @@
 package main
 
-import "goDemo/lmap"
+import "goDemo/test"
 
 func main() {
-	lmap.Test()
+	test.Test2()
 }
