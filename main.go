@@ -1,7 +1,7 @@
 package main
 
-import "goDemo/test"
+import "goDemo/lalgorithm"
 
 func main() {
-	test.Test2()
+	lalgorithm.Sort()
 }

@@ -1,4 +1,4 @@
-package test
+package ltest
 
 import "fmt"
 
@@ -37,4 +37,20 @@ func Test2() {
 	for k, v := range m {
 		fmt.Println(k, "->", *v)
 	}
+}
+
+func app() func(string) string {
+	t := "Hi"
+	c := func(b string) string {
+		t = t + " " + b
+		return t
+	}
+	return c
+}
+
+func Test3() {
+	a := app()
+	b := app()
+	a("go")
+	fmt.Println(b("All"))
 }
