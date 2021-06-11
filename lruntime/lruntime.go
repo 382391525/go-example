@@ -12,6 +12,7 @@ func Test() {
 		}
 	}("world")
 	for i := 0; i < 2; i++ {
+		//出让当前cpu的时间片
 		runtime.Gosched()
 		fmt.Println("hello")
 	}

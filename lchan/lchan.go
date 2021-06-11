@@ -22,7 +22,7 @@ func Chan1() {
 	go test1(output1)
 	go test2(output2)
 	// 用select监控
-	for  {
+	for {
 		select {
 		case s1 := <-output1:
 			fmt.Println("s1=", s1)
@@ -30,6 +30,27 @@ func Chan1() {
 			fmt.Println("s2=", s2)
 		default:
 			fmt.Println("default")
+		}
+	}
+}
+
+func DeadLock() {
+	ch1 := make(chan string)
+	ch2 := make(chan string)
+	go func() {
+		for {
+			select {
+			case s1 := <-ch1:
+				fmt.Println("1:",s1)
+				ch2 <- s1
+			}
+		}
+	}()
+	for {
+		select {
+		case s2 := <-ch2:
+			fmt.Println("2:",s2)
+			ch1 <- s2
 		}
 	}
 }

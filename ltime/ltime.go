@@ -15,6 +15,12 @@ func Timer() {
 	fmt.Println("timer")
 }
 
+func Timer2() {
+	fmt.Println(time.Now().Format("2006-01-02 15:04:05"))
+	after := <-time.After(time.Second * 2)
+	fmt.Println(after.Format("2006-01-02 15:04:05"))
+}
+
 func Ticker() {
 	ticker := time.NewTicker(time.Second)
 	defer ticker.Stop()

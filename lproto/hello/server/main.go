@@ -2,10 +2,10 @@ package main
 
 import (
 	"fmt"
-	pb "goDemo/lproto/proto/hello"
 	"golang.org/x/net/context"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/grpclog"
+	pb "learn-golang/lproto/proto/hello"
 	"net"
 )
 
